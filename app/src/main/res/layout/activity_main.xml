@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/equation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
+        android:maxLines="3"
+        android:layout_marginStart="10dp"
+        android:textAlignment="viewEnd"
+        android:hint="@string/start_typing"
+        android:textColor="@color/textcolor"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="20/5+10-5+5" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:maxLines="3"
+        android:layout_marginStart="10dp"
+        android:textAlignment="viewEnd"
+        android:id="@+id/result"
+
+        android:hint="@string/_0_0"
+        android:textColor="@color/textcolor"
+        android:textSize="40sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equation"
+        tools:text="=8456453465" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/zero"
+        android:layout_width="140dp"
+        android:layout_height="62dp"
+        android:text="@string/_zero"
+        android:textSize="25sp"
+        android:clickable="true"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/custom_button"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/equal"
+        android:layout_width="62dp"
+        android:layout_height="101dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/_equal"
+        android:textSize="25sp"
+        android:clickable="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dot" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/plus"
+        android:layout_width="62dp"
+        android:layout_height="101dp"
+        android:text="@string/plus"
+        android:textSize="25sp"
+        android:clickable="true"
+        android:background="@drawable/custom_button"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/equal"
+        app:layout_constraintStart_toEndOf="@+id/six" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/minus"
+        android:layout_width="62dp"
+        android:background="@drawable/custom_button"
+        android:layout_height="62dp"
+        android:text="@string/minus"
+        android:textSize="25sp"
+        android:clickable="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/plus"
+        app:layout_constraintStart_toEndOf="@+id/nine" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/multiply"
+        android:layout_width="62dp"
+        android:background="@drawable/custom_button"
+        android:layout_height="62dp"
+        android:textSize="25sp"
+        android:text="@string/multiply"
+        android:clickable="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
+        app:layout_constraintStart_toEndOf="@+id/divide" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/divide"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:textSize="25sp"
+        android:text="@string/divide"
+        android:background="@drawable/custom_button"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/nine"
+        app:layout_constraintStart_toEndOf="@+id/back" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nine"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:text="@string/_nine"
+        android:textSize="25sp"
+        android:background="@drawable/custom_button"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/six"
+        app:layout_constraintStart_toEndOf="@+id/eight" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/six"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:textSize="25sp"
+        android:text="@string/_six"
+        android:background="@drawable/custom_button"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/three"
+        app:layout_constraintStart_toEndOf="@+id/five" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/three"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:textSize="25sp"
+        android:background="@drawable/custom_button"
+        android:text="@string/_three"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/dot"
+        app:layout_constraintStart_toEndOf="@+id/two" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dot"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:background="@drawable/custom_button"
+        android:text="@string/dot"
+        android:paddingBottom="15dp"
+        android:clickable="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/zero" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/back"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:textSize="25sp"
+        android:background="@drawable/custom_button"
+        android:src="@drawable/delete_icon"
+        android:clickable="true"
+        android:contentDescription="@string/delete"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/eight"
+        app:layout_constraintStart_toEndOf="@+id/AC" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/eight"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/_eight"
+        android:textSize="25sp"
+        android:clickable="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/five"
+        app:layout_constraintStart_toEndOf="@+id/seven" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/five"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/_five"
+        android:textSize="25sp"
+        android:clickable="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/two"
+        app:layout_constraintStart_toEndOf="@+id/four" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/two"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/_two"
+        android:textSize="25sp"
+        android:clickable="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/zero"
+        app:layout_constraintStart_toEndOf="@+id/one" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AC"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:textSize="25sp"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/ac"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/seven"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/seven"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:textSize="25sp"
+        android:text="@string/_seven"
+        android:background="@drawable/custom_button"
+        android:layout_marginStart="40dp"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/four"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/four"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:background="@drawable/custom_button"
+        android:layout_marginStart="40dp"
+        android:text="@string/_four"
+        android:textSize="25sp"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/one"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/one"
+        android:background="@drawable/custom_button"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:textSize="25sp"
+        android:clickable="true"
+        android:text="@string/_one"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/zero"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
